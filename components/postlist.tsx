@@ -1,4 +1,4 @@
-// components/PostList.tsx
+
 interface Post {
     id: number;
     title: string;
