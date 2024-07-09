@@ -1,4 +1,6 @@
 
+import StyledPostList from '../components/styledPostList'
+
 interface Post {
     id: number;
     title: string;
@@ -11,14 +13,15 @@ interface Post {
   
   const PostList: React.FC<PostListProps> = ({ posts }) => {
     return (
-      <div>
+      <StyledPostList>
         {posts.map((post) => (
           <div key={post.id}>
             <h2>{post.title}</h2>
+            
             <p>{post.content}</p>
           </div>
         ))}
-      </div>
+      </StyledPostList>
     );
   };
   

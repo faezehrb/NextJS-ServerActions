@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PostForm from '../../components/postform';
 import PostList from '../../components/postlist';
+import StyledHome from '../styledHome'
 
 interface Post {
   id: number;
@@ -29,11 +30,11 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Blog App</h1>
-      <PostForm fetchPosts={fetchPosts} />
-      <PostList posts={posts} />
-    </div>
+      <StyledHome>
+        <h1>Blog App</h1>
+        <PostForm fetchPosts={fetchPosts} />
+        <PostList posts={posts} />
+      </StyledHome>
   );
 };
 

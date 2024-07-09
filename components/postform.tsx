@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import axios from 'axios';
+import {StyledForm, SubmitButton} from '../components/styledForm'
 
 interface PostFormProps {
   fetchPosts: () => void;
@@ -24,7 +25,7 @@ const PostForm: React.FC<PostFormProps> = ({ fetchPosts }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit}>
       <div>
         <label>Title</label>
         <input
@@ -36,15 +37,15 @@ const PostForm: React.FC<PostFormProps> = ({ fetchPosts }) => {
       </div>
       <div>
         <label>Content</label>
-        <textarea
+        <input
           value={content}
           onChange={(e) => setContent(e.target.value)}
           required
         />
       </div>
-      <button type="submit">Submit</button>
-    </form>
-  );
+      <SubmitButton> Submit </SubmitButton>
+    </StyledForm>
+  ); 
 };
 
 export default PostForm;
