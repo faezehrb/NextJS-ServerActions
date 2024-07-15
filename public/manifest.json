@@ -1,0 +1,22 @@
+{ 
+    "name": "serveractions PWA Test",
+    "short_name": "SAbPWA",
+    "theme_color": "#00ff00",
+    "background_color": "#ffffff", 
+    "display": "standalone", 
+    "orientation": "any", 
+    "scope": "/", 
+    "start_url": "/", 
+    "icons": [ 
+                { 
+                    "src": "/icons-192.png", 
+                    "type": "image/png", 
+                    "sizes": "192x192" 
+                },
+                {    
+                    "src": "/icons-192.png", 
+                    "type": "image/png", 
+                    "sizes": "256x256" 
+                }
+            ] 
+}
